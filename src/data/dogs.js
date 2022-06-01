@@ -6,7 +6,7 @@ const data = {
 			goodAlt: 'A dog sitting in the middle of a group of flowers.',
 		},
 		{
-			img: '/assets/dog-red-ball.jpg',
+			img: '/assets/dog-red-ball2.jpg',
 			badAlt: 'A dog',
 			goodAlt: 'A dog running with a red ball.',
 		},
@@ -21,7 +21,7 @@ const data = {
 			goodAlt: 'A dog tugging on a blue rope.',
 		},
 		{
-			img: '/assets/dog-stick.jpg',
+			img: '/assets/dog-stick2.jpg',
 			badAlt: 'A dog',
 			goodAlt: 'A dog running with a stick in his mouth.',
 		},
