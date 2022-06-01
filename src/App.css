@@ -4,18 +4,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 
+}
+
+.logo{
+  background-color: #282c34;
+}
+
+.logo img{
+ width: 270px;
+ padding: 20px;
+ display:block;
 }
 
 .photos{  
   display: flex;
   align-items: flex-start;
   flex-wrap: nowrap;
-  justify-content: center;
-  flex-direction: row;}
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.photo:focus{
+  border: 1px solid red;
+}
 
 .select-container select{
 padding:20px;

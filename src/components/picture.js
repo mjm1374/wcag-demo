@@ -6,7 +6,7 @@ const Picture = ({ data, type }) => {
 
 	return (
 		<div className='photo'>
-			<a href='#'>
+			<a href='/'>
 				<img src={img} alt={useAlt} className='img' />
 			</a>
 		</div>

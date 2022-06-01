@@ -11,12 +11,12 @@ const data = {
 			goodAlt: 'A dog running with a red ball.',
 		},
 		{
-			img: '/assets/dog-legs.jpg',
+			img: '/assets/dog-legs2.jpg',
 			badAlt: 'A dog',
 			goodAlt: 'A dog with artificial legs on the beach.',
 		},
 		{
-			img: '/assets/dog-rope.jpg',
+			img: '/assets/dog-rope2.jpg',
 			badAlt: 'A dog',
 			goodAlt: 'A dog tugging on a blue rope.',
 		},

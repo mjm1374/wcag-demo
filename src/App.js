@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Picture from './components/picture';
 import data from './data/dogs';
+import logo from './assets/deerfield.svg';
 
 import './App.css';
 
@@ -26,6 +27,9 @@ function App() {
 
 	return (
 		<div className='App'>
+			<div className='logo'>
+				<img src={logo} alt='Deerfield' />
+			</div>
 			<header className='App-header'>
 				<div className='photos'>
 					{data.dogs.map((item, index) => {
@@ -44,8 +48,10 @@ function App() {
 							label: altType.label,
 							value: altType.value,
 						}}>
-						{options.map((option) => (
-							<option value={option.value}>{option.label}</option>
+						{options.map((option, index) => (
+							<option value={option.value} key={index}>
+								{option.label}
+							</option>
 						))}
 					</select>
 				</div>
