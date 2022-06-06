@@ -5,12 +5,14 @@ const Picture = ({ data, type }) => {
 	const useAlt = type === 'good' ? data.goodAlt : data.badAlt;
 
 	return (
-		<div className='photo'>
-			<a href='/'>
+		<a href='#'>
+		<div className='photo' tab-index="-1">
 				<img src={img} alt={useAlt} className='img' />
-			</a>
+			
+			{/* {useAlt} */}
 		</div>
-	);
+		</a>			
+	);	
 };
 
 export default Picture;

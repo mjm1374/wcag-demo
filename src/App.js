@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Select from 'react-select';
+import FormControl from '@mui/material/FormControl'
 import Picture from './components/picture';
 import data from './data/dogs';
 import logo from './assets/deerfield.svg';
@@ -6,7 +8,30 @@ import logo from './assets/deerfield.svg';
 import './App.css';
 
 function App() {
-	const [altType, setAltType] = useState('bad');
+
+	const customStyles = {
+		control: (base, state) => ({
+			...base,
+			background: "#fff",
+			// match with the menu
+			borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
+			// Removes weird border around container
+			boxShadow: state.isFocused ? null : null,
+		}),
+		menu: base => ({
+			...base,
+			// override border radius to match the box
+			borderRadius: 0,
+			// kill the gap
+			marginTop: 0
+			}),
+			menuList: base => ({
+			...base,
+			// kill the white space on first and last option
+			padding: 0,
+			color: '#000'
+		})
+	};
 
 	const options = [
 		{
@@ -18,17 +43,17 @@ function App() {
 			value: 'bad',
 		},
 	];
+	const [altType, setAltType] = useState('bad');
+	console.log(altType);
 
 	const handleChange = (e) => {
-		console.log('Fruit Selected!!');
-		//this.setState({ fruit: e.target.value });
-		setAltType(e.target.value);
+		setAltType(e.value);
 	};
 
 	return (
 		<div className='App'>
 			<div className='logo'>
-				<img src={logo} alt='Deerfield' />
+				<img src={logo} alt='Deerfield Logo' />
 			</div>
 			<header className='App-header'>
 				<div className='photos'>
@@ -42,18 +67,15 @@ function App() {
 					})}
 				</div>
 				<div className='select-container'>
-					<select
-						onChange={handleChange}
-						defaultValue={{
-							label: altType.label,
-							value: altType.value,
-						}}>
-						{options.map((option, index) => (
-							<option value={option.value} key={index}>
-								{option.label}
-							</option>
-						))}
-					</select>
+					<FormControl fullWidth>
+						<Select
+							styles={customStyles}
+							onChange={handleChange}
+							defaultValue={options[1]}
+							value={options.value}
+							options={options}>
+						</Select>
+					</FormControl>
 				</div>
 			</header>
 		</div>
