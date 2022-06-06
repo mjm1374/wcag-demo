@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
-import FormControl from '@mui/material/FormControl'
+import FormControl from '@mui/material/FormControl';
 import Picture from './components/picture';
 import data from './data/dogs';
 import logo from './assets/deerfield.svg';
@@ -8,29 +8,28 @@ import logo from './assets/deerfield.svg';
 import './App.css';
 
 function App() {
-
 	const customStyles = {
 		control: (base, state) => ({
 			...base,
-			background: "#fff",
+			background: '#fff',
 			// match with the menu
-			borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
+			borderRadius: state.isFocused ? '3px 3px 0 0' : 3,
 			// Removes weird border around container
 			boxShadow: state.isFocused ? null : null,
 		}),
-		menu: base => ({
+		menu: (base) => ({
 			...base,
 			// override border radius to match the box
 			borderRadius: 0,
 			// kill the gap
-			marginTop: 0
-			}),
-			menuList: base => ({
+			marginTop: 0,
+		}),
+		menuList: (base) => ({
 			...base,
 			// kill the white space on first and last option
 			padding: 0,
-			color: '#000'
-		})
+			color: '#000',
+		}),
 	};
 
 	const options = [
@@ -73,8 +72,7 @@ function App() {
 							onChange={handleChange}
 							defaultValue={options[1]}
 							value={options.value}
-							options={options}>
-						</Select>
+							options={options}></Select>
 					</FormControl>
 				</div>
 			</header>

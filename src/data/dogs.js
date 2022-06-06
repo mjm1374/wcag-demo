@@ -18,7 +18,7 @@ const data = {
 		{
 			img: '/assets/dog-rope2.jpg',
 			badAlt: 'A dog playing',
-			goodAlt: 'A dog tugging on a blue rope.',
+			goodAlt: 'A dog tugging on a blue rope.', 
 		},
 		{
 			img: '/assets/dog-stick.jpg',
