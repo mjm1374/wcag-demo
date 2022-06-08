@@ -9,14 +9,11 @@ body {
 }
 
 .App-header {
- 
   min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  
-
 }
 
 .dropdown {
@@ -28,26 +25,26 @@ body {
 }
 
 .logo img{
- width: 270px;
- padding: 20px;
- display:block;
+  width: 270px;
+  padding: 20px;
+  display:block;
 }
 
 .photos{  
- display: flex;
- justify-content:center;
- align-items:center;
- flex-direction: column;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
 }
 
 .photo:focus{
   border: 1px solid red;
 }
 .select-container{
-   padding-top: 20px;
+  padding-top: 20px;
+  margin-left: -20px;
 }
 .select-container select{
   padding:20px;
   clear: both;
- 
 }
