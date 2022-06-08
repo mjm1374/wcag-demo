@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import Grid from '@mui/material/Grid';
 import Select from 'react-select';
 import FormControl from '@mui/material/FormControl';
 import Picture from './components/picture';
+import Display from './components/display';
 import data from './data/dogs';
 import logo from './assets/deerfield.svg';
 
@@ -43,39 +45,58 @@ function App() {
 		},
 	];
 	const [altType, setAltType] = useState('bad');
-	console.log(altType);
+	const [displayImg, setDisplayImg] = useState('');
 
 	const handleChange = (e) => {
 		setAltType(e.value);
 	};
 
+	const setDisplay = (img) => {
+		setDisplayImg(img);
+	};
+
 	return (
 		<div className='App'>
-			<div className='logo'>
-				<img src={logo} alt='Deerfield Logo' />
-			</div>
 			<header className='App-header'>
-				<div className='photos'>
-					{data.dogs.map((item, index) => {
-						return (
-							<Picture
-								key={index}
-								data={item}
-								type={altType}></Picture>
-						);
-					})}
-				</div>
-				<div className='select-container'>
-					<FormControl fullWidth>
-						<Select
-							styles={customStyles}
-							onChange={handleChange}
-							defaultValue={options[1]}
-							value={options.value}
-							options={options}></Select>
-					</FormControl>
+				<div className='logo'>
+					<img src={logo} alt='Deerfield Logo' />
 				</div>
 			</header>
+			<div className='container'>
+				<Grid container columns={{ xs: 4, md: 12 }}>
+					<Grid item xs={2} direction={'column'}>
+						<div className='photos'>
+							{data.dogs.map((item, index) => {
+								return (
+									<Picture
+										key={index}
+										data={item}
+										type={altType}
+										setDisplay={setDisplay}></Picture>
+								);
+							})}
+							<div className='select-container'>
+								<FormControl>
+									<Select
+										className='dropdown'
+										styles={customStyles}
+										onChange={handleChange}
+										defaultValue={options[1]}
+										value={options.value}
+										options={options}></Select>
+								</FormControl>
+							</div>
+						</div>
+					</Grid>
+					<Grid item xs={10}>
+						<section>
+							<Display image={displayImg} />
+						</section>
+					</Grid>
+				</Grid>
+
+				<div className='select-container'></div>
+			</div>
 		</div>
 	);
 }

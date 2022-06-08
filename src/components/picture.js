@@ -1,15 +1,23 @@
+import React from 'react';
+
 import './picture.css';
 
-const Picture = ({ data, type }) => {
+const Picture = ({ data, type, setDisplay }) => {
 	const img = data.img;
 	const useAlt = type === 'good' ? data.goodAlt : data.badAlt;
 
-	return (
-		<a href='/'>
-			<div className='photo' tab-index='-1'>
-				<img src={img} alt={useAlt} className='img' />
+	const setDisplayImg = (img) => {
+		setDisplay(img);
+	};
 
-				{/* {useAlt} */}
+	return (
+		<a
+			href='/'
+			onFocus={(e) => {
+				setDisplayImg(img);
+			}}>
+			<div className='photo'>
+				<img src={img} alt={useAlt} className='img' />
 			</div>
 		</a>
 	);

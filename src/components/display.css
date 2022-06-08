@@ -1,0 +1,10 @@
+.display{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display--img{
+    border: 10px solid white;
+    max-width: 80%;
+}
