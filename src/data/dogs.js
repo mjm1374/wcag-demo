@@ -20,13 +20,13 @@ const data = {
 			goodAlt: 'A dog with artificial legs on the beach.',
 		},
 		{
-			img: '/assets/dog-rope2.jpg',
+			img: '/assets/image.jpg',
 			crapAlt: '',
 			badAlt: 'A dog playing',
-			goodAlt: 'A dog tugging on a blue and white rope.',
+			goodAlt: 'A dog tugging on a blue and rope.',
 		},
 		{
-			img: '/assets/dog-stick.jpg',
+			img: '/assets/dg-436792.jpg',
 			crapAlt: '',
 			badAlt: 'A dog running',
 			goodAlt: 'A dog running with a stick in his mouth.',

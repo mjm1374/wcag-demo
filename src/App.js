@@ -36,12 +36,16 @@ function App() {
 
 	const options = [
 		{
-			label: 'Good Alt',
-			value: 'good',
+			label: 'No Alt',
+			value: 'crap',
 		},
 		{
 			label: 'Bad Alt',
 			value: 'bad',
+		},
+		{
+			label: 'Good Alt',
+			value: 'good',
 		},
 	];
 	const [altType, setAltType] = useState('bad');
