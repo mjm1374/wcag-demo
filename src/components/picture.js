@@ -15,6 +15,10 @@ const Picture = ({ data, type, setDisplay }) => {
 			href='/'
 			onFocus={(e) => {
 				setDisplayImg(img);
+			}}
+			onClick={(e) => {
+				e.preventDefault();
+				setDisplayImg(img);
 			}}>
 			<div className='photo'>
 				<img src={img} alt={useAlt} className='img' />

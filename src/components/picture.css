@@ -9,6 +9,7 @@ a{
     width: 150px;
     height: 100%;
     margin-right: 20px;
+    padding: 10px;
 }
 
 .photo a:focus{
