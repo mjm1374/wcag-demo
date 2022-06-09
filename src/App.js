@@ -36,15 +36,15 @@ function App() {
 
 	const options = [
 		{
-			label: 'No Alt',
+			label: 'No Alt-text',
 			value: 'crap',
 		},
 		{
-			label: 'Bad Alt',
+			label: 'Bad Alt-text',
 			value: 'bad',
 		},
 		{
-			label: 'Good Alt',
+			label: 'Good Alt-text',
 			value: 'good',
 		},
 	];

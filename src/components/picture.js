@@ -8,7 +8,7 @@ const Picture = ({ data, type, setDisplay }) => {
 	let useAlt = data.crapAlt;
 	switch (type) {
 		case 'good':
-			useAlt = data.goodAll;
+			useAlt = data.goodAlt;
 			break;
 		case 'bad':
 			useAlt = data.badAlt;
