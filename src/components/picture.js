@@ -14,7 +14,7 @@ const Picture = ({ data, type, setDisplay }) => {
 			useAlt = data.badAlt;
 			break;
 		default:
-			useAlt = data.carpAlt;
+			useAlt = data.crapAlt;
 	}
 
 	const setDisplayImg = (img) => {
